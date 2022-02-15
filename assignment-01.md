@@ -2,7 +2,7 @@
 
 # CMPS 2200 Assignment 1
 
-**Name:**_________________________
+**Name:** Keith J Mitchell
 
 
 In this assignment, you will learn more about asymptotic notation, parallelism, functional languages, and algorithmic cost models. As in the recitation, some of your answer will go here and some will go in `main.py`. You are welcome to edit this `assignment-01.md` file directly, or print and fill in by hand. If you do the latter, please scan to a file `assignment-01.pdf` and push to your github repository. 
@@ -12,35 +12,28 @@ In this assignment, you will learn more about asymptotic notation, parallelism, 
 1. (2 pts ea) **Asymptotic notation** (12 pts)
 
   - 1a. Is $2^{n+1} \in O(2^n)$? Why or why not? 
-.  
-.  
-.  
-.  
-. 
+
+No, 2^n is not asymptotically dominant over 2^(n+1) as the limit method results in the constant of 2 which is greater than 0 and not infinity, meaning they are asymptotically equal to one another.
+
   - 1b. Is $2^{2^n} \in O(2^n)$? Why or why not?     
-.  
-.  
-.  
-.  
-.  
+
+No, 2^n is not asymptotically dominant over 2^(2^n) as the limit method yields the result of infinity, meaning 2^n is being asymptotically dominated. 
+
   - 1c. Is $n^{1.01} \in O(\mathrm{log}^2 n)$?    
-.  
-.  
-.  
-.  
+
+No, as the limit method results in infinity meaning log^2(n) is asymptotically dominated by n^1.01 
 
   - 1d. Is $n^{1.01} \in \Omega(\mathrm{log}^2 n)$?  
-.  
-.  
-.  
-.  
+
+Yes, log^2(n) is asymptotically dominated by n^1.01 as the limit method results in 0.
+
   - 1e. Is $\sqrt{n} \in O((\mathrm{log} n)^3)$?  
-.  
-.  
-.  
-.  
+
+No, as the use of the limit method achieves a value of 0 which means log(n)^3 is being asymptotically dominated. 
+
   - 1f. Is $\sqrt{n} \in \Omega((\mathrm{log} n)^3)$?  
-.  
+
+Yes, as the use of the limit method achieves a value of infinity meaning sqrt(n) asymptotically dominates log(n)^3.
 
 
 2. **SPARC to Python** (12 pts)
@@ -62,14 +55,7 @@ $$
 
   - 2b. (6 pts) What does this function do, in your own words?  
 
-.  
-.  
-.  
-.  
-.  
-.  
-.  
-.  
+.  This function recursively calls itself x amount of times when the value of x is greater than 1. In doing so, it returns the Fibonacci sequence number that matches the parameter value of x. This is achieved by adding the two numbers returned when the x value minus one and two are both called For example, when the foo function is called with an x value of 7, the returned value is 8 as the values for 5 (3) and 6 (5) added together equal 8
   
 
 3. **Parallelism and recursion** (26 pts)
